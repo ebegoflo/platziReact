@@ -6,6 +6,8 @@ import Grid from 'material-ui/Grid';
 
 import Video from './Video';
 import Button from './Button';
+import Input from './Input';
+
 
 const styles = theme => ({
   root: {
@@ -32,7 +34,9 @@ function FullWidthGrid(props) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Paper className={classes.paper}> <Button /> </Paper>
+          <Paper className={classes.paper}> <Input /> </Paper>
         </Grid>
+
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>xs=6 sm=3</Paper>
         </Grid>
