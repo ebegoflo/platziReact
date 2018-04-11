@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Input from 'material-ui/Input';
+import Account from './Accountant';
 
 
 const styles = theme => ({
@@ -21,14 +22,19 @@ function Inputs(props) {
   return (
     <div className={classes.container}>
 
-      <Input
+      <TextField
         placeholder="Escribe una nota"
         className={classes.input}
         inputProps={{
           'aria-label': 'Description',
           'width':'100%'
         }}
-      />
+        /><br />
+      <br />
+
+
+
+      <Account/>
 
 
     </div>
