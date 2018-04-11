@@ -1,21 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 
+class TextFieldExampleSimple extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            count: 140
+        }
+        this.clicked = this.clicked.bind(this);
+    }
 
-const TextFieldExampleSimple = () => (
-    <div>
-      <TextField
-        hintText="Hint Text"
-      /><br />
-      <br />
+    clicked(e)
+    {
+        e.preventDefault();
+        this.setState((prevState) => ({
+            count:(prevState.count - 1)
+        }));
+    }
 
-      <Button variant="raised" color="primary">
-        Reproducir
-      </Button>
+    render(){
+        return(
+            <div>
+            <TextField
+              hintText="Hint Text"
+            /><br />
+            <br />
+      
+            <Button onClick={this.clicked} variant="raised" color="primary">
+              {this.state.count}
+            </Button>
+      
+          </div>
+        )
+       
 
-    </div>
-);
+    }
+    
+}
+
+
+
 
 export default TextFieldExampleSimple;
 
